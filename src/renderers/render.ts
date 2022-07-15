@@ -32,7 +32,7 @@ export default async function render(
   ].join("\n\n")
 
   const source = [
-    renderContentfulImports(localization),
+    renderContentfulImports(localization, hasRichText(contentTypes)),
     renderNamespace(typingsSource, namespace),
   ].join("\n\n")
 
@@ -48,5 +48,11 @@ function renderAllContentTypeIds(contentTypes: ContentType[]): string {
   return renderUnion(
     "CONTENT_TYPE",
     contentTypes.map(contentType => `'${contentType.sys.id}'`),
+  )
+}
+
+function hasRichText(contentTypes: ContentType[]): boolean {
+  return contentTypes.some(sortedContentType =>
+    sortedContentType.fields.some(f => !f.omitted && f.type === "RichText"),
   )
 }
