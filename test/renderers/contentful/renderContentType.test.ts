@@ -75,9 +75,9 @@ describe("renderContentType()", () => {
                   sys: {
                     id: \\"myContentType\\",
                     linkType: \\"ContentType\\",
-                    type: \\"Link\\"
-                  }
-                }
+                    type: \\"Link\\",
+                  },
+                },
               };
             }"
         `)
@@ -100,9 +100,9 @@ describe("renderContentType()", () => {
             sys: {
               id: \\"myContentType\\",
               linkType: \\"ContentType\\",
-              type: \\"Link\\"
-            }
-          }
+              type: \\"Link\\",
+            },
+          },
         };
       }"
     `)
@@ -129,9 +129,9 @@ describe("renderContentType()", () => {
             sys: {
               id: \\"myContentType\\",
               linkType: \\"ContentType\\",
-              type: \\"Link\\"
-            }
-          }
+              type: \\"Link\\",
+            },
+          },
         };
       }"
     `)

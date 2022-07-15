@@ -38,8 +38,7 @@ describe("renderFieldsOnly()", () => {
     expect(await renderFieldsOnly(contentTypes)).toMatchInlineSnapshot(`
             "export interface IMyContentType {
               fields: {
-                /** Array field */
-                arrayField: (\\"one\\" | \\"of\\" | \\"the\\" | \\"above\\")[]
+                /** Array field */ arrayField: (\\"one\\" | \\"of\\" | \\"the\\" | \\"above\\")[]
               }
               [otherKeys: string]: any
             }
@@ -52,8 +51,7 @@ describe("renderFieldsOnly()", () => {
       "declare namespace Codegen {
         export interface IMyContentType {
           fields: {
-            /** Array field */
-            arrayField: (\\"one\\" | \\"of\\" | \\"the\\" | \\"above\\")[]
+            /** Array field */ arrayField: (\\"one\\" | \\"of\\" | \\"the\\" | \\"above\\")[]
           }
           [otherKeys: string]: any
         }
